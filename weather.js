@@ -1,3 +1,28 @@
+function checkTime(i){
+	if (i < 10){
+		i = "0" + i
+	}
+	return i;
+}
+
+function startTime(){
+	let today = new Date();
+	let h = today.getHours();
+	let m = today.getMinutes();
+	let s = today.getSeconds();
+
+	m = checkTime(m)
+	s = checkTime(s)
+
+	document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+
+	t = setTimeout (function(){
+		startTime()
+	}, 500);
+}
+startTime()
+
+
 function weatherData( cityName ){
 	let key = 'd09150822deceefd0208270e69d760a4';
 	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + key)
@@ -24,6 +49,7 @@ function drawWeather( d ) {
 	let icon = d.weather[0].icon;
 	let iconurl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 	let country = d.sys.country;
+	let time = new Date();
 	
 	document.getElementById('description').innerHTML = description;
 	document.getElementById('temp').innerHTML = celcius + '&deg;' + "c";
@@ -31,4 +57,5 @@ function drawWeather( d ) {
 	document.getElementById('location').innerHTML = d.name + " City" + ", "+ country;
 	document.getElementById('wind').innerHTML = "wind speed: " + wind +" m/s";
 	document.querySelector("#wicon").src = iconurl;
+	document.querySelector("#time").time = time;
 }
