@@ -3,9 +3,11 @@ body{
     background-repeat: no-repeat, repeat;
     background-size: cover;
     background-position: relative;
-    text-underline-position: 
     color: black;
     padding: 1em;
+    height: : 100%;
+    margin: 0px;
+    background-position: center;
 }
 
 #weather{
@@ -15,19 +17,15 @@ body{
     border-radius: 10px;
     display: grid;
     align-content: center;
-    height: 50% fixed;
-    width: 50%;
+    height: 100%;
+    width: auto;
     margin: auto;
     color: black;
     font-size: 30px;
     padding: 10px;
     font-family: "comic sans";
 }
-.instruct{
-    text-align: center;
-    font-family: "comic sans";
-    padding: 10px;
-}
+
 h1{
     text-align: center;
     font-family: verdana;
@@ -39,40 +37,39 @@ h1{
     color: black; !important
     font: bolder; !important
 }
-input[type=text]{
+input[type=search]{
     border: none;
     width: 100%;
-    float: left;
+    
     text-decoration: none;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid grey;
     background-color: inherit;
-    color: white;
+    color: green;
+    text-align: center;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     align-items: center;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
     font-family: "comic sans";
     font-weight: bold;
 }
-#search{
-    display: flex; !important
-}
+
 input[type=submit]{
-    width: 20%;
-    float: left;
-    outline: none;
+    width: 100%;
+    outline: inherit;
+    color: inherit;
+    background: none;
     margin-top: 2px;
     box-sizing: border-box;
     border: none;
     border-radius: 10px;
-    position: flex;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bolder;
     cursor: pointer;
-    color: black;
-    z-index: 1;
+    color: green;
     text-align: center;
     background-position: 10px 10px; 
     background-repeat: no-repeat;

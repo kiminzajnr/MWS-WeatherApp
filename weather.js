@@ -40,6 +40,7 @@ window.onload = function(){
 	weatherData(cityName);
 }
 
+
 function drawWeather( d ) {
 	let celcius = Math.round(parseFloat(d.main.temp)-273.15);
 	let fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
