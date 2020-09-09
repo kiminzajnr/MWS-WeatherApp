@@ -48,7 +48,7 @@ function drawWeather( d ) {
 	let humidity = parseFloat(d.main.humidity);
 	let wind = parseFloat(d.wind.speed);
 	let icon = d.weather[0].icon;
-	let iconurl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+	let iconurl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
 	let country = d.sys.country;
 	let time = new Date();
 	
@@ -59,4 +59,14 @@ function drawWeather( d ) {
 	document.getElementById('wind').innerHTML = "wind speed: " + wind +" m/s";
 	document.querySelector("#wicon").src = iconurl;
 	document.querySelector("#time").time = time;
+}
+
+if ('serviceWorker' in navigator){ //check if service worker is supported
+	navigator.serviceWorker.register('./MWS-WeatherApp/sw.js', {scope: './MWS-WeatherApp/'})
+	.then((reg)=>{
+		//registration worked
+		console.log('Registration succeeded. Scope' + reg.scope);
+	}).catch((error)=>{
+		console.log('registration failed with' + error);
+	});
 }
