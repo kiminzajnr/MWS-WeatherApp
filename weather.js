@@ -62,7 +62,7 @@ function drawWeather( d ) {
 }
 
 if ('serviceWorker' in navigator){ //check if service worker is supported
-	navigator.serviceWorker.register('./MWS-WeatherApp/sw.js', {scope: './MWS-WeatherApp/'})
+	navigator.serviceWorker.register('sw.js')
 	.then((reg)=>{
 		//registration worked
 		console.log('Registration succeeded. Scope' + reg.scope);

@@ -2,21 +2,21 @@ self.addEventListener('install', (event)=>{
 	event.waitUntil(
 		caches.open('v1').then((cache)=>{
 			return cache.addAll([
-				'./MWS-WeatherApp/',
-				'./MWS-WeatherApp/index.html',
-				'./MWS-WeatherApp/style.css',
-				'./MWS-WeatherApp/weather.js',
-				'./MWS-WeatherApp/apple-touch-icon.png',
-				'./MWS-WeatherApp/favicon-32x32.png',
-				'./MWS-WeatherApp/android-chrome-192x192.png',
-				'./MWS-WeatherApp/android-chrome-144x144',
-				'./MWS-WeatherApp/android-chrome-256x256',
-				'./MWS-WeatherApp/android-chrome-36x36',
-				'./MWS-WeatherApp/android-chrome-384x384',
-				'./MWS-WeatherApp/android-chrome-48x48',
-				'./MWS-WeatherApp/android-chrome-72x72',
-				'./MWS-WeatherApp/android-chrome-96x96',
-				'./MWS-WeatherApp/favicon-16x16.png'
+				'/',
+				'index.html',
+				'style.css',
+				'weather.js',
+				'apple-touch-icon.png',
+				'favicon-32x32.png',
+				'android-chrome-192x192.png',
+				'android-chrome-144x144',
+				'android-chrome-256x256',
+				'android-chrome-36x36',
+				'android-chrome-384x384',
+				'android-chrome-48x48',
+				'android-chrome-72x72',
+				'android-chrome-96x96',
+				'favicon-16x16.png'
 				]);
 		})
 		);
@@ -36,7 +36,7 @@ self.addEventListener('fetch', function(event){
 					});
 					return response;
 				}).catch(function (){
-					return caches.match('./MWS-WeatherApp/index.html');
+					return caches.match('index.html');
 				});
 			});
 		}
