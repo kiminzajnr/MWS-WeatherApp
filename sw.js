@@ -40,7 +40,7 @@ self.addEventListener('fetch', function(event){
 					});
 					return response;
 				}).catch(function (){
-					return caches.match('/index.html');
+					return caches.match('./index.html');
 				});
 			});
 		}
