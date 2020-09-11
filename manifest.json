@@ -1,7 +1,7 @@
 {
     "name": "WeatherApp",
     "short_name": "WeatherApp",
-    "start_url": "./index.html",
+    "start_url": "../index.html",
     "icons": [
         {
             "src": "android-chrome-36x36.png",
