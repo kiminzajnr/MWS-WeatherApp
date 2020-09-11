@@ -62,11 +62,12 @@ function drawWeather( d ) {
 }
 
 if ('serviceWorker' in navigator){ //check if service worker is supported
-	navigator.serviceWorker.register('sw.js')
-	.then((reg)=>{
+	navigator.serviceWorker.register('./sw.js')
+	.then( function(reg){
 		//registration worked
-		console.log('Registration succeeded. Scope' + reg.scope);
-	}).catch((error)=>{
-		console.log('registration failed with' + error);
+		console.log('Registration succeeded. Scope' + reg);
+	}).catch( function (error){
+		//registration failed
+		console.warn('registration failed with' + error);
 	});
 }
