@@ -3,4 +3,5 @@
 
 - This is also live [here](https://weather-app-kiminza.firebaseapp.com/)
 
-https://travis-ci.org/kiminzajnr/MWS-WeatherApp.svg?branch=master
+[![Build Status](https://travis-ci.org/kiminzajnr/MWS-WeatherApp.svg?branch=master)](https://travis-ci.org/kiminzajnr/weather-app-kiminza)
+
