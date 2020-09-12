@@ -40,7 +40,6 @@ window.onload = function(){
 	weatherData(cityName);
 }
 
-
 function drawWeather( d ) {
 	let celcius = Math.round(parseFloat(d.main.temp)-273.15);
 	let fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
@@ -61,13 +60,14 @@ function drawWeather( d ) {
 	document.querySelector("#time").time = time;
 }
 
-if ('serviceWorker' in navigator){ //check if service worker is supported
-	navigator.serviceWorker.register('./sw.js')
-	.then( function(reg){
-		//registration worked
-		console.log('Registration succeeded. Scope' + reg);
-	}).catch( function (error){
-		//registration failed
-		console.warn('registration failed with' + error);
+if ('serviceWorker' in navigator){
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('/worker.js')
+		.then(reg => {
+			console.log('service worker registered');
+		})
+		.catch(err => {
+			console.log('service worker registration failed')
+		});
 	});
 }
