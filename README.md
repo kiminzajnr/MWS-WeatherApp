@@ -3,7 +3,7 @@
 ---
 - GADS-MWS practice project
 
-- This is also live [here](https://weather-app-kiminza.firebaseapp.com/)
+- Live App [here](https://weather-app-kiminza.firebaseapp.com/)
 
 ---
 This web app consumes the [Weather API](https://openweathermap.org/api) using vanilla JavaScript, HTML and CSS to map the weather data from the api to front end.
